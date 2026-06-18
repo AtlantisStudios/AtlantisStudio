@@ -15,10 +15,10 @@ import {
   Music,
   Play,
 } from "lucide-react";
-import logo from "@/assets/atlantis-logo.png";
-import distributionHero from "@/assets/distribution-hero.jpg";
-import masteringHero from "@/assets/mastering-hero.jpg";
-import studioBg from "@/assets/studio-bg.jpg";
+import logo from "@/assets/atlantis-logo.png.asset.json";
+import distributionHero from "@/assets/distribution-hero.jpg.asset.json";
+import masteringHero from "@/assets/mastering-hero.jpg.asset.json";
+import studioBg from "@/assets/studio-bg.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
