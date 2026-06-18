@@ -15,10 +15,15 @@ import {
   Music,
   Play,
 } from "lucide-react";
-import logo from "@/assets/atlantis-logo.png.asset.json";
-import distributionHero from "@/assets/distribution-hero.jpg.asset.json";
-import masteringHero from "@/assets/mastering-hero.jpg.asset.json";
-import studioBg from "@/assets/studio-bg.jpg.asset.json";
+import logoAsset from "@/assets/atlantis-logo.png.asset.json";
+import distributionHeroAsset from "@/assets/distribution-hero.jpg.asset.json";
+import masteringHeroAsset from "@/assets/mastering-hero.jpg.asset.json";
+import studioBgAsset from "@/assets/studio-bg.jpg.asset.json";
+
+const logo = logoAsset.url;
+const distributionHero = distributionHeroAsset.url;
+const masteringHero = masteringHeroAsset.url;
+const studioBg = studioBgAsset.url;
 
 export const Route = createFileRoute("/")({
   head: () => ({
