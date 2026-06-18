@@ -15,6 +15,7 @@ import {
   Music,
   Play,
 } from "lucide-react";
+import { ScrollProgress, ParallaxBackdrop, Reveal, ParallaxImage } from "@/components/ScrollFX";
 import logoAsset from "@/assets/atlantis-logo.png.asset.json";
 import distributionHeroAsset from "@/assets/distribution-hero.jpg.asset.json";
 import masteringHeroAsset from "@/assets/mastering-hero.jpg.asset.json";
@@ -76,7 +77,10 @@ const masterFeatures = [
 
 function Index() {
   return (
-    <div className="min-h-screen text-cream overflow-x-hidden">
+    <div className="min-h-screen text-cream overflow-x-hidden relative">
+      <ScrollProgress />
+      <ParallaxBackdrop />
+      <div className="relative z-[1]">
       {/* HERO */}
       <header
         className="relative min-h-screen flex flex-col items-center justify-center px-6 py-16"
@@ -101,44 +105,48 @@ function Index() {
             alt="Atlantis Studios — Grabación, Mezcla, Producción"
             width={420}
             height={420}
-            className="w-64 md:w-80 mb-8 drop-shadow-2xl"
+            className="w-64 md:w-80 mb-8 drop-shadow-2xl animate-float"
           />
 
-          <div className="flex items-center gap-4 mb-6">
+          <Reveal className="flex items-center gap-4 mb-6">
             <div className="h-px w-12 bg-gold/60" />
             <span className="ornament text-[0.6rem] md:text-xs">TU MÚSICA · NUESTRO ARTE</span>
             <div className="h-px w-12 bg-gold/60" />
-          </div>
+          </Reveal>
 
-          <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-6">
-            <span className="block gradient-gold-text">Tu música</span>
-            <span className="block text-cream italic font-serif font-normal text-3xl md:text-5xl mt-3">
-              merece llegar
-            </span>
-            <span className="block gradient-gold-text">más lejos</span>
-          </h1>
+          <Reveal delay={120}>
+            <h1 className="font-display font-bold text-5xl md:text-7xl lg:text-8xl leading-[0.95] mb-6">
+              <span className="block gradient-gold-text shimmer-text">Tu música</span>
+              <span className="block text-cream italic font-serif font-normal text-3xl md:text-5xl mt-3">
+                merece llegar
+              </span>
+              <span className="block gradient-gold-text shimmer-text">más lejos</span>
+            </h1>
+          </Reveal>
 
-          <p className="font-serif italic text-lg md:text-xl text-cream/80 max-w-2xl leading-relaxed mt-4">
-            Distribución digital y mastering profesional desde Nueva Atlantis, Buenos Aires.
-            Vos creás, nosotros la llevamos al mundo.
-          </p>
+          <Reveal delay={240}>
+            <p className="font-serif italic text-lg md:text-xl text-cream/80 max-w-2xl leading-relaxed mt-4">
+              Distribución digital y mastering profesional desde Nueva Atlantis, Buenos Aires.
+              Vos creás, nosotros la llevamos al mundo.
+            </p>
+          </Reveal>
 
-          <div className="flex flex-col sm:flex-row gap-4 mt-10">
+          <Reveal delay={360} className="flex flex-col sm:flex-row gap-4 mt-10">
             <a
               href="#distribucion"
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gold text-ink font-display tracking-widest text-sm font-semibold hover:bg-cream transition-colors"
+              className="btn-magnetic group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gold text-ink font-display tracking-widest text-sm font-semibold"
             >
-              <Globe2 className="size-4" />
+              <Globe2 className="size-4 transition-transform group-hover:rotate-12" />
               DISTRIBUCIÓN
             </a>
             <a
               href="#mastering"
-              className="group inline-flex items-center justify-center gap-3 px-8 py-4 border border-gold text-gold font-display tracking-widest text-sm font-semibold hover:bg-gold hover:text-ink transition-colors"
+              className="btn-magnetic group inline-flex items-center justify-center gap-3 px-8 py-4 border border-gold text-gold font-display tracking-widest text-sm font-semibold hover:bg-gold hover:text-ink transition-colors"
             >
-              <Sliders className="size-4" />
+              <Sliders className="size-4 transition-transform group-hover:rotate-12" />
               MASTERING
             </a>
-          </div>
+          </Reveal>
         </div>
 
         <div className="absolute bottom-8 left-0 right-0 flex items-center justify-center gap-4 px-6 z-10">
@@ -153,33 +161,27 @@ function Index() {
       {/* DISTRIBUCIÓN */}
       <section id="distribucion" className="relative py-24 md:py-32 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <Reveal className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-16 bg-gold/60" />
               <span className="ornament text-xs">TU MÚSICA · EN TODAS LAS PLATAFORMAS</span>
               <div className="h-px w-16 bg-gold/60" />
             </div>
-            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text mb-4">
+            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text shimmer-text mb-4">
               Distribución
             </h2>
             <p className="font-serif italic text-2xl md:text-3xl text-cream/90">Digital</p>
-          </div>
+          </Reveal>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
-            <div className="relative">
-              <div className="absolute -inset-3 border border-gold/30" />
-              <div className="absolute -inset-1.5 border border-gold/60" />
-              <img
+            <Reveal>
+              <ParallaxImage
                 src={distributionHero}
                 alt="Globo dorado conectando con plataformas digitales"
-                width={1280}
-                height={1280}
-                loading="lazy"
-                className="relative w-full"
               />
-            </div>
+            </Reveal>
 
-            <div>
+            <Reveal delay={150}>
               <p className="font-serif text-2xl md:text-3xl leading-relaxed text-cream/90 mb-6">
                 Llevamos tu música a más de{" "}
                 <span className="text-gold font-semibold not-italic">50 plataformas digitales</span>{" "}
@@ -189,7 +191,7 @@ function Index() {
                 Vos creás, nosotros la distribuimos.
               </p>
 
-              <div className="vintage-card p-6 md:p-8">
+              <div className="vintage-card interactive-card p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-5">
                   <Music className="size-4 text-gold" />
                   <span className="font-display text-xs tracking-[0.3em] text-gold">
@@ -200,7 +202,7 @@ function Index() {
                   {platforms.map((p) => (
                     <span
                       key={p}
-                      className="font-sans text-base text-cream/85 flex items-center gap-2"
+                      className="font-sans text-base text-cream/85 flex items-center gap-2 transition-all hover:text-gold hover:translate-x-1 cursor-default"
                     >
                       <Play className="size-3 text-gold" fill="currentColor" />
                       {p}
@@ -208,22 +210,22 @@ function Index() {
                   ))}
                 </div>
               </div>
-            </div>
+            </Reveal>
           </div>
 
           <div className="gold-divider mb-16" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {distFeatures.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="text-center group">
-                <div className="inline-flex items-center justify-center size-16 rounded-full border border-gold/40 mb-5 group-hover:border-gold transition-colors">
+            {distFeatures.map(({ icon: Icon, title, desc }, i) => (
+              <Reveal key={title} delay={i * 80} className="text-center group feature-card">
+                <div className="feature-icon inline-flex items-center justify-center size-16 rounded-full border border-gold/40 mb-5">
                   <Icon className="size-6 text-gold" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-xs tracking-[0.2em] text-gold mb-3 font-semibold">
                   {title.toUpperCase()}
                 </h3>
                 <p className="font-sans text-sm text-cream/70 leading-relaxed">{desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -249,20 +251,20 @@ function Index() {
         }}
       >
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
+          <Reveal className="text-center mb-16">
             <div className="flex items-center justify-center gap-4 mb-6">
               <div className="h-px w-16 bg-gold/60" />
               <span className="ornament text-xs">TU MÚSICA · TU IDENTIDAD · NUESTRO MASTER</span>
               <div className="h-px w-16 bg-gold/60" />
             </div>
-            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text mb-4">
+            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text shimmer-text mb-4">
               Mastering
             </h2>
             <p className="font-serif italic text-2xl md:text-3xl text-cream/90">Profesional</p>
-          </div>
+          </Reveal>
 
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
-            <div className="order-2 lg:order-1">
+            <Reveal className="order-2 lg:order-1">
               <p className="font-serif text-2xl md:text-3xl leading-relaxed text-cream/90 mb-6">
                 Llevá tu música al siguiente nivel.
               </p>
@@ -275,14 +277,14 @@ function Index() {
                 {["PRECISIÓN", "EQUILIBRIO", "VOLUMEN", "IMPACTO", "TRADUCCIÓN"].map((tag) => (
                   <span
                     key={tag}
-                    className="px-4 py-2 border border-gold/40 font-display text-[0.65rem] tracking-[0.25em] text-gold"
+                    className="tag-chip px-4 py-2 border border-gold/40 font-display text-[0.65rem] tracking-[0.25em] text-gold cursor-default"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
 
-              <div className="vintage-card p-6 md:p-8">
+              <div className="vintage-card interactive-card p-6 md:p-8">
                 <div className="flex items-center gap-3 mb-4">
                   <Headphones className="size-4 text-gold" />
                   <span className="font-display text-xs tracking-[0.3em] text-gold">
@@ -293,35 +295,29 @@ function Index() {
                   Spotify · Apple Music · YouTube · Streaming · Redes · Shows
                 </p>
               </div>
-            </div>
+            </Reveal>
 
-            <div className="relative order-1 lg:order-2">
-              <div className="absolute -inset-3 border border-gold/30" />
-              <div className="absolute -inset-1.5 border border-gold/60" />
-              <img
+            <Reveal delay={150} className="order-1 lg:order-2">
+              <ParallaxImage
                 src={masteringHero}
                 alt="Consola analógica vintage con medidor VU dorado"
-                width={1280}
-                height={1280}
-                loading="lazy"
-                className="relative w-full"
               />
-            </div>
+            </Reveal>
           </div>
 
           <div className="gold-divider mb-16" />
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {masterFeatures.map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="text-center group">
-                <div className="inline-flex items-center justify-center size-16 rounded-full border border-gold/40 mb-5 group-hover:border-gold transition-colors">
+            {masterFeatures.map(({ icon: Icon, title, desc }, i) => (
+              <Reveal key={title} delay={i * 80} className="text-center group feature-card">
+                <div className="feature-icon inline-flex items-center justify-center size-16 rounded-full border border-gold/40 mb-5">
                   <Icon className="size-6 text-gold" strokeWidth={1.5} />
                 </div>
                 <h3 className="font-display text-xs tracking-[0.2em] text-gold mb-3 font-semibold">
                   {title.toUpperCase()}
                 </h3>
                 <p className="font-sans text-sm text-cream/70 leading-relaxed">{desc}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
 
