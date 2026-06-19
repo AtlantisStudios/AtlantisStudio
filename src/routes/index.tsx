@@ -158,6 +158,13 @@ function Index() {
               DISTRIBUCIÓN
             </a>
             <a
+              href="#mezcla"
+              className="btn-magnetic group inline-flex items-center justify-center gap-3 px-8 py-4 border border-gold text-gold font-display tracking-widest text-sm font-semibold hover:bg-gold hover:text-ink transition-colors"
+            >
+              <Layers className="size-4 transition-transform group-hover:rotate-12" />
+              MEZCLA
+            </a>
+            <a
               href="#mastering"
               className="btn-magnetic group inline-flex items-center justify-center gap-3 px-8 py-4 border border-gold text-gold font-display tracking-widest text-sm font-semibold hover:bg-gold hover:text-ink transition-colors"
             >
