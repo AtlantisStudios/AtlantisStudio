@@ -1,4 +1,4 @@
-{import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react' // o '@vitejs/plugin-react-swc' según el que uses
 import path from 'path'
 
