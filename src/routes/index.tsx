@@ -77,6 +77,14 @@ const distFeatures = [
   { icon: Headphones, title: "Enfocate En Tu Arte", desc: "Dejanos el trabajo técnico para que vos te enfoques en crear y crecer." },
 ];
 
+const mezclaFeatures = [
+  { icon: Ear, title: "Imagen Estéreo", desc: "Experiencia de sonido envolvente y equilibrada en todo el espectro." },
+  { icon: Sliders, title: "Balance Total", desc: "Cada instrumento y voz en su lugar perfecto." },
+  { icon: BarChart3, title: "Claridad y Pegada", desc: "Realzamos la definición y la dinámica para un sonido profesional." },
+  { icon: Calendar, title: "Flujo de Trabajo", desc: "Entregamos tus mezclas a tiempo y nos adaptamos a tus plazos." },
+  { icon: Headphones, title: "Escucha Crítica", desc: "Análisis detallado de cada pista para un control total del sonido." },
+];
+
 const masterFeatures = [
   { icon: Sliders, title: "Sonido Profesional", desc: "Mayor claridad, equilibrio y definición en todas las frecuencias." },
   { icon: Headphones, title: "Listo Para Plataformas", desc: "Optimizado para Spotify, Apple Music, YouTube y más." },
