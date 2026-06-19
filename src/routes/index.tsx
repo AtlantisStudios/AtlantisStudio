@@ -467,7 +467,7 @@ function Index() {
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
                 <iframe
                   title="Ubicación de Atlantis Studios en Google Maps"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218!2d-56.6805845!3d-36.7651652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c65d902d54f1f%3A0x1f870e4b5045d2c3!2sAtlantis%20Studios!5e0!3m2!1ses!2sar!4v1718812800000!6m2!1ses!2sar"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3196.2251769640925!2d-56.680584499999995!3d-36.7651652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c65d902d54f1f%3A0x1f870e4b5045d2c3!2sAtlantis%20Studios!5e0!3m2!1ses-419!2sar!4v1781895495979!5m2!1ses-419!2sar"
                   className="absolute inset-0 w-full h-full border-0 grayscale-[20%] hover:grayscale-0 transition-all duration-700"
                   allowFullScreen
                   loading="lazy"
