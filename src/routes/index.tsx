@@ -98,6 +98,15 @@ function Index() {
     <div className="min-h-screen text-cream overflow-x-hidden relative">
       <ScrollProgress />
       <ParallaxBackdrop />
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escribinos por WhatsApp"
+        className="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center size-14 rounded-full bg-gold text-ink shadow-[0_10px_40px_-5px_oklch(0.72_0.14_75/0.6)] hover:scale-110 hover:shadow-[0_0_50px_oklch(0.72_0.14_75/0.8)] transition-all animate-float"
+      >
+        <MessageCircle className="size-7" strokeWidth={2} />
+      </a>
       <div className="relative z-[1]">
       {/* HERO */}
       <header
