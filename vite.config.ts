@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // When deploying to GitHub Pages, set the base path to /<repo>/ so built asset
+  // URLs point to the repository path instead of the site root.
+  // Replace 'AtlantisStudio' below if you rename the repo.
+  vite: {
+    base: '/AtlantisStudio/',
+  },
 });
