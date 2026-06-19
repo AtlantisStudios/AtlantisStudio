@@ -16,9 +16,8 @@ import {
   Play,
   MessageCircle,
   Layers,
-  Activity,
-  Volume2,
   Ear,
+
 } from "lucide-react";
 import { ScrollProgress, ParallaxBackdrop, Reveal, ParallaxImage } from "@/components/ScrollFX";
 import logoAsset from "@/assets/atlantis-logo.png.asset.json";
