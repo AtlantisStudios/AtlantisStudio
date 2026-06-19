@@ -451,13 +451,13 @@ function Index() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/5492257633307"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gold text-ink font-display tracking-widest text-sm font-semibold hover:bg-cream transition-colors"
+              className="btn-magnetic inline-flex items-center justify-center gap-3 px-10 py-5 bg-gold text-ink font-display tracking-widest text-sm font-semibold hover:bg-cream transition-colors"
             >
-              <Phone className="size-4" />
-              +54 9 2257 63-3307
+              <MessageCircle className="size-4" />
+              ESCRIBINOS POR WHATSAPP
             </a>
             <a
               href="https://instagram.com/atlantisstudios.lacosta"
