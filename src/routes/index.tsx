@@ -445,6 +445,62 @@ function Index() {
         </div>
       </section>
 
+      {/* UBICACIÓN */}
+      <section id="ubicacion" className="relative py-24 md:py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <Reveal className="text-center mb-12">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-gold/60" />
+              <span className="ornament text-xs">VISITÁ EL ESTUDIO</span>
+              <div className="h-px w-16 bg-gold/60" />
+            </div>
+            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text shimmer-text mb-4">
+              Ubicación
+            </h2>
+            <p className="font-serif italic text-2xl md:text-3xl text-cream/90">
+              Nueva Atlantis, Buenos Aires
+            </p>
+          </Reveal>
+
+          <Reveal delay={150}>
+            <div className="vintage-card interactive-card overflow-hidden border border-gold/30 shadow-[0_0_60px_-20px_oklch(0.78_0.13_80/0.25)]">
+              <div className="relative w-full aspect-[16/9] md:aspect-[21/9]">
+                <iframe
+                  title="Ubicación de Atlantis Studios en Google Maps"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218!2d-56.6805845!3d-36.7651652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959c65d902d54f1f%3A0x1f870e4b5045d2c3!2sAtlantis%20Studios!5e0!3m2!1ses!2sar!4v1718812800000!6m2!1ses!2sar"
+                  className="absolute inset-0 w-full h-full border-0 grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+              <div className="p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="flex items-start gap-4">
+                  <div className="feature-icon inline-flex items-center justify-center size-12 rounded-full border border-gold/40 shrink-0">
+                    <MapPin className="size-5 text-gold" strokeWidth={1.5} />
+                  </div>
+                  <div>
+                    <h3 className="font-display text-sm tracking-[0.2em] text-gold mb-1">ATLANTIS STUDIOS</h3>
+                    <p className="font-sans text-cream/70 text-base leading-relaxed">
+                      Nueva Atlantis, Partido de La Costa, Buenos Aires, Argentina
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href="https://www.google.com/maps/place/Atlantis+Studios/@-36.7651652,-56.6805845,17z"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-magnetic inline-flex items-center justify-center gap-2 px-8 py-4 border border-gold text-gold font-display tracking-widest text-xs font-semibold hover:bg-gold hover:text-ink transition-colors"
+                >
+                  <MapPin className="size-4" />
+                  ABRIR EN GOOGLE MAPS
+                </a>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="relative py-24 px-6 border-y border-gold/30">
         <div className="max-w-4xl mx-auto text-center">
