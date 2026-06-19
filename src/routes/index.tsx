@@ -14,16 +14,26 @@ import {
   MapPin,
   Music,
   Play,
+  MessageCircle,
+  Layers,
+  Activity,
+  Volume2,
+  Ear,
 } from "lucide-react";
 import { ScrollProgress, ParallaxBackdrop, Reveal, ParallaxImage } from "@/components/ScrollFX";
 import logoAsset from "@/assets/atlantis-logo.png.asset.json";
 import distributionHeroAsset from "@/assets/distribution-hero.jpg.asset.json";
 import masteringHeroAsset from "@/assets/mastering-hero.jpg.asset.json";
+import mezclaHeroAsset from "@/assets/mezcla-hero.jpg.asset.json";
 import studioBgAsset from "@/assets/studio-bg.jpg.asset.json";
+
+const WHATSAPP_URL =
+  "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2F5cr159%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnagVeXEnAVCDq6uNSSRN6irT0TG175yWGqvWpgdy2iapD-5DfcnJyHxe3hBY_aem_4bhQNYuMhYaBohns65fvBA&e=AUBHSPDkrpVqZbtFGvXqYEF5FVxI38lEuoLqOwpkPPFuQ-n4FV8gcHwA0eomkncpWj8NnMqZBtXsenrmXSEo5toZACLSfVUTjmYbQRx-kO1ewv-oZgyknkZOOs-r9TIC1q81eVfRGidzoEcMCgcMK-s";
 
 const logo = logoAsset.url;
 const distributionHero = distributionHeroAsset.url;
 const masteringHero = masteringHeroAsset.url;
+const mezclaHero = mezclaHeroAsset.url;
 const studioBg = studioBgAsset.url;
 
 export const Route = createFileRoute("/")({
