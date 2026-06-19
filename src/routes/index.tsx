@@ -258,6 +258,88 @@ function Index() {
         </div>
       </div>
 
+      {/* MEZCLA */}
+      <section id="mezcla" className="relative py-24 md:py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="text-center mb-16">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-gold/60" />
+              <span className="ornament text-xs">SACA EL MÁXIMO POTENCIAL DE TU MÚSICA</span>
+              <div className="h-px w-16 bg-gold/60" />
+            </div>
+            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text shimmer-text mb-4">
+              Mezcla
+            </h2>
+            <p className="font-serif italic text-2xl md:text-3xl text-cream/90">Profesional</p>
+          </Reveal>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+            <Reveal>
+              <ParallaxImage
+                src={mezclaHero}
+                alt="Consola de mezcla analógica dorada con globo terráqueo"
+              />
+            </Reveal>
+
+            <Reveal delay={150}>
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-cream/90 mb-6">
+                Transformamos tus grabaciones en un sonido{" "}
+                <span className="text-gold font-semibold not-italic">cristalino y potente</span>.
+              </p>
+              <p className="font-serif italic text-xl text-cream/70 mb-10">
+                Vos creás, nosotros perfeccionamos.
+              </p>
+
+              <div className="vintage-card interactive-card p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <Layers className="size-4 text-gold" />
+                  <span className="font-display text-xs tracking-[0.3em] text-gold">
+                    INGENIERÍA DE SONIDO DE CLASE MUNDIAL
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["VOCES", "INSTRUMENTOS", "DINÁMICA", "PROFUNDIDAD", "ESPACIO", "PUNCH"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="tag-chip px-4 py-2 border border-gold/40 font-display text-[0.65rem] tracking-[0.25em] text-gold cursor-default"
+                      >
+                        {tag}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="gold-divider mb-16" />
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {mezclaFeatures.map(({ icon: Icon, title, desc }, i) => (
+              <Reveal key={title} delay={i * 80} className="text-center group feature-card">
+                <div className="feature-icon inline-flex items-center justify-center size-16 rounded-full border border-gold/40 mb-5">
+                  <Icon className="size-6 text-gold" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-display text-xs tracking-[0.2em] text-gold mb-3 font-semibold">
+                  {title.toUpperCase()}
+                </h3>
+                <p className="font-sans text-sm text-cream/70 leading-relaxed">{desc}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DIVIDER */}
+      <div className="relative py-8 px-6">
+        <div className="max-w-4xl mx-auto flex items-center gap-4">
+          <div className="h-px flex-1 bg-gold/40" />
+          <span className="ornament text-xs">CADA DETALLE CUENTA · CADA FRECUENCIA IMPORTA</span>
+          <div className="h-px flex-1 bg-gold/40" />
+        </div>
+      </div>
+
       {/* MASTERING */}
       <section
         id="mastering"
