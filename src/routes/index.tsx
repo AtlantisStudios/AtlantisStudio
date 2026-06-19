@@ -14,16 +14,25 @@ import {
   MapPin,
   Music,
   Play,
+  MessageCircle,
+  Layers,
+  Ear,
+
 } from "lucide-react";
 import { ScrollProgress, ParallaxBackdrop, Reveal, ParallaxImage } from "@/components/ScrollFX";
 import logoAsset from "@/assets/atlantis-logo.png.asset.json";
 import distributionHeroAsset from "@/assets/distribution-hero.jpg.asset.json";
 import masteringHeroAsset from "@/assets/mastering-hero.jpg.asset.json";
+import mezclaHeroAsset from "@/assets/mezcla-hero.jpg.asset.json";
 import studioBgAsset from "@/assets/studio-bg.jpg.asset.json";
+
+const WHATSAPP_URL =
+  "https://l.instagram.com/?u=https%3A%2F%2Fwa.link%2F5cr159%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnagVeXEnAVCDq6uNSSRN6irT0TG175yWGqvWpgdy2iapD-5DfcnJyHxe3hBY_aem_4bhQNYuMhYaBohns65fvBA&e=AUBHSPDkrpVqZbtFGvXqYEF5FVxI38lEuoLqOwpkPPFuQ-n4FV8gcHwA0eomkncpWj8NnMqZBtXsenrmXSEo5toZACLSfVUTjmYbQRx-kO1ewv-oZgyknkZOOs-r9TIC1q81eVfRGidzoEcMCgcMK-s";
 
 const logo = logoAsset.url;
 const distributionHero = distributionHeroAsset.url;
 const masteringHero = masteringHeroAsset.url;
+const mezclaHero = mezclaHeroAsset.url;
 const studioBg = studioBgAsset.url;
 
 export const Route = createFileRoute("/")({
@@ -67,6 +76,14 @@ const distFeatures = [
   { icon: Headphones, title: "Enfocate En Tu Arte", desc: "Dejanos el trabajo técnico para que vos te enfoques en crear y crecer." },
 ];
 
+const mezclaFeatures = [
+  { icon: Ear, title: "Imagen Estéreo", desc: "Experiencia de sonido envolvente y equilibrada en todo el espectro." },
+  { icon: Sliders, title: "Balance Total", desc: "Cada instrumento y voz en su lugar perfecto." },
+  { icon: BarChart3, title: "Claridad y Pegada", desc: "Realzamos la definición y la dinámica para un sonido profesional." },
+  { icon: Calendar, title: "Flujo de Trabajo", desc: "Entregamos tus mezclas a tiempo y nos adaptamos a tus plazos." },
+  { icon: Headphones, title: "Escucha Crítica", desc: "Análisis detallado de cada pista para un control total del sonido." },
+];
+
 const masterFeatures = [
   { icon: Sliders, title: "Sonido Profesional", desc: "Mayor claridad, equilibrio y definición en todas las frecuencias." },
   { icon: Headphones, title: "Listo Para Plataformas", desc: "Optimizado para Spotify, Apple Music, YouTube y más." },
@@ -80,6 +97,15 @@ function Index() {
     <div className="min-h-screen text-cream overflow-x-hidden relative">
       <ScrollProgress />
       <ParallaxBackdrop />
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Escribinos por WhatsApp"
+        className="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center size-14 rounded-full bg-gold text-ink shadow-[0_10px_40px_-5px_oklch(0.72_0.14_75/0.6)] hover:scale-110 hover:shadow-[0_0_50px_oklch(0.72_0.14_75/0.8)] transition-all animate-float"
+      >
+        <MessageCircle className="size-7" strokeWidth={2} />
+      </a>
       <div className="relative z-[1]">
       {/* HERO */}
       <header
@@ -138,6 +164,13 @@ function Index() {
             >
               <Globe2 className="size-4 transition-transform group-hover:rotate-12" />
               DISTRIBUCIÓN
+            </a>
+            <a
+              href="#mezcla"
+              className="btn-magnetic group inline-flex items-center justify-center gap-3 px-8 py-4 border border-gold text-gold font-display tracking-widest text-sm font-semibold hover:bg-gold hover:text-ink transition-colors"
+            >
+              <Layers className="size-4 transition-transform group-hover:rotate-12" />
+              MEZCLA
             </a>
             <a
               href="#mastering"
@@ -236,6 +269,88 @@ function Index() {
         <div className="max-w-4xl mx-auto flex items-center gap-4">
           <div className="h-px flex-1 bg-gold/40" />
           <span className="ornament text-xs">VOS HACÉS MÚSICA · NOSOTROS LA LLEVAMOS AL MUNDO</span>
+          <div className="h-px flex-1 bg-gold/40" />
+        </div>
+      </div>
+
+      {/* MEZCLA */}
+      <section id="mezcla" className="relative py-24 md:py-32 px-6">
+        <div className="max-w-7xl mx-auto">
+          <Reveal className="text-center mb-16">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <div className="h-px w-16 bg-gold/60" />
+              <span className="ornament text-xs">SACA EL MÁXIMO POTENCIAL DE TU MÚSICA</span>
+              <div className="h-px w-16 bg-gold/60" />
+            </div>
+            <h2 className="font-display text-5xl md:text-7xl font-bold gradient-gold-text shimmer-text mb-4">
+              Mezcla
+            </h2>
+            <p className="font-serif italic text-2xl md:text-3xl text-cream/90">Profesional</p>
+          </Reveal>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+            <Reveal>
+              <ParallaxImage
+                src={mezclaHero}
+                alt="Consola de mezcla analógica dorada con globo terráqueo"
+              />
+            </Reveal>
+
+            <Reveal delay={150}>
+              <p className="font-serif text-2xl md:text-3xl leading-relaxed text-cream/90 mb-6">
+                Transformamos tus grabaciones en un sonido{" "}
+                <span className="text-gold font-semibold not-italic">cristalino y potente</span>.
+              </p>
+              <p className="font-serif italic text-xl text-cream/70 mb-10">
+                Vos creás, nosotros perfeccionamos.
+              </p>
+
+              <div className="vintage-card interactive-card p-6 md:p-8">
+                <div className="flex items-center gap-3 mb-5">
+                  <Layers className="size-4 text-gold" />
+                  <span className="font-display text-xs tracking-[0.3em] text-gold">
+                    INGENIERÍA DE SONIDO DE CLASE MUNDIAL
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["VOCES", "INSTRUMENTOS", "DINÁMICA", "PROFUNDIDAD", "ESPACIO", "PUNCH"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="tag-chip px-4 py-2 border border-gold/40 font-display text-[0.65rem] tracking-[0.25em] text-gold cursor-default"
+                      >
+                        {tag}
+                      </span>
+                    ),
+                  )}
+                </div>
+              </div>
+            </Reveal>
+          </div>
+
+          <div className="gold-divider mb-16" />
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+            {mezclaFeatures.map(({ icon: Icon, title, desc }, i) => (
+              <Reveal key={title} delay={i * 80} className="text-center group feature-card">
+                <div className="feature-icon inline-flex items-center justify-center size-16 rounded-full border border-gold/40 mb-5">
+                  <Icon className="size-6 text-gold" strokeWidth={1.5} />
+                </div>
+                <h3 className="font-display text-xs tracking-[0.2em] text-gold mb-3 font-semibold">
+                  {title.toUpperCase()}
+                </h3>
+                <p className="font-sans text-sm text-cream/70 leading-relaxed">{desc}</p>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* DIVIDER */}
+      <div className="relative py-8 px-6">
+        <div className="max-w-4xl mx-auto flex items-center gap-4">
+          <div className="h-px flex-1 bg-gold/40" />
+          <span className="ornament text-xs">CADA DETALLE CUENTA · CADA FRECUENCIA IMPORTA</span>
           <div className="h-px flex-1 bg-gold/40" />
         </div>
       </div>
@@ -344,13 +459,13 @@ function Index() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/5492257633307"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-gold text-ink font-display tracking-widest text-sm font-semibold hover:bg-cream transition-colors"
+              className="btn-magnetic inline-flex items-center justify-center gap-3 px-10 py-5 bg-gold text-ink font-display tracking-widest text-sm font-semibold hover:bg-cream transition-colors"
             >
-              <Phone className="size-4" />
-              +54 9 2257 63-3307
+              <MessageCircle className="size-4" />
+              ESCRIBINOS POR WHATSAPP
             </a>
             <a
               href="https://instagram.com/atlantisstudios.lacosta"
